@@ -28,6 +28,7 @@ class Bug
 
     /**
      * @ORM\Column(type="datetime")
+     * @var DateTime
      **/
     private $created;
 
@@ -38,11 +39,13 @@ class Bug
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="assignedBugs")
+     * @var User
      **/
     private $engineer;
 
     /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="reportedBugs")
+     * @var User
      **/
     private $reporter;
 
